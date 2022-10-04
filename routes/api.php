@@ -1,6 +1,6 @@
 <?php
-use App\Models\Category;
-use App\Models\Post;
+
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'Admin\PostController@Index');
+Route::get('/posts', 'Api\PostController@index');

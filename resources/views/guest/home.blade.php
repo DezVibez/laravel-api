@@ -62,6 +62,8 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        <script defer src="{{ asset('js/front.js') }}"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -79,12 +81,13 @@
                 </div>
             @endif
 
-            <div class="content">
+            <div id="root">
                 <div class="title m-b-md">
                     Work in Progress...
                 </div>
 
             </div>
+
         </div>
     </body>
 </html>
