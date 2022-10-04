@@ -1,20 +1,20 @@
 <template>
     <div class="content">
-        <Placeholder :title = "title"/>
+        <AppHeader :title = "title"/>
     </div>
 </template>
 
 <script>
-    import Placeholder from "./Placeholder";
+    import AppHeader from "./AppHeader";
     
     export default {
         name: "App",
         components: {
-            Placeholder,
+            AppHeader,
         },
         data(){
             return {
-                title: "Coming Soon...",
+                title: "Boolpress",
             };
         },
     };
