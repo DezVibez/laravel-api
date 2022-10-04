@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,7 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function(){
-    $posts = Post::all();
-    return response()->json( compact('posts') );
-});
+Route::get('/', 'Admin\PostController@Index');
