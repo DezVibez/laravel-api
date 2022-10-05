@@ -3,7 +3,7 @@
         <AppHeader :title = "title"/>
         <main class="container mt-3">
         
-        <PostsList/>
+            <PostsList />
 
         </main>
             
