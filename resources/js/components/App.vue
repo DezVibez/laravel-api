@@ -3,8 +3,8 @@
         <AppHeader :title = "title"/>
         <main class="container mt-3">
         
-            <HomePage/>
-
+            <!-- <HomePage/> -->
+            <ContactsPage/>
         </main>
             
 
@@ -13,12 +13,14 @@
 
 <script>
     import AppHeader from "./AppHeader";
-    import HomePage from "./pages/HomePage.vue"
+   // import HomePage from "./pages/HomePage.vue"
+    import ContactsPage from "./pages/ContactsPage.vue"
     export default {
         name: "App",
         components: {
             AppHeader,
-            HomePage
+            //HomePage,
+            ContactsPage
         },
         data(){
             return {
