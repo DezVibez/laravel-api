@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">{{ post.title }}</h5>
-      <h6 class="card-subtitle">Pubblicato il: {{ post.created_at }}</h6>
+      <h6 class="card-subtitle">Pubblicato il: {{ publishedAt }}</h6>
       <p class="card-text">
 
         {{ post.content }}
@@ -23,7 +23,18 @@ export default {
     post: Object,
   },
   computed: {
-    
+    publishedAt(){
+
+        const postDate = new Date(this.post.created_at);
+        let day = postDate.getDate();
+        let month = postDate.getMonth() + 1;
+        let year = postDate.getFullYear();
+
+        if(day < 10) day = "0" + day;
+        if(month < 10) month = "0" + month;
+
+        return `${day}/${month}/${year}`;
+    }
   }
 };
 </script>

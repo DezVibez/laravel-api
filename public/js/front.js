@@ -1959,7 +1959,17 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     post: Object
   },
-  computed: {}
+  computed: {
+    publishedAt: function publishedAt() {
+      var postDate = new Date(this.post.created_at);
+      var day = postDate.getDate();
+      var month = postDate.getMonth() + 1;
+      var year = postDate.getFullYear();
+      if (day < 10) day = "0" + day;
+      if (month < 10) month = "0" + month;
+      return "".concat(day, "/").concat(month, "/").concat(year);
+    }
+  }
 });
 
 /***/ }),
@@ -2127,7 +2137,7 @@ var render = function render() {
     staticClass: "card-title"
   }, [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("h6", {
     staticClass: "card-subtitle"
-  }, [_vm._v("Pubblicato il: " + _vm._s(_vm.post.created_at))]), _vm._v(" "), _c("p", {
+  }, [_vm._v("Pubblicato il: " + _vm._s(_vm.publishedAt))]), _vm._v(" "), _c("p", {
     staticClass: "card-text"
   }, [_vm._v("\n\n      " + _vm._s(_vm.post.content) + "\n    ")]), _vm._v(" "), _vm._m(0)])]);
 };
