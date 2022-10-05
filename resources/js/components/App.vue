@@ -3,7 +3,7 @@
         <AppHeader :title = "title"/>
         <main class="container mt-3">
         
-            <PostsList />
+            <HomePage/>
 
         </main>
             
@@ -13,12 +13,12 @@
 
 <script>
     import AppHeader from "./AppHeader";
-    import PostsList from "./posts/PostsList.vue"
+    import HomePage from "./pages/HomePage.vue"
     export default {
         name: "App",
         components: {
             AppHeader,
-            PostsList
+            HomePage
         },
         data(){
             return {
