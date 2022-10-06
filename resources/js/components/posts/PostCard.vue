@@ -1,7 +1,10 @@
 <template>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">{{ post.title }}</h5>
+      <div class="card-header my-3 d-flex justify-content-between">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <button>Vedi</button>
+      </div>
       <h6 class="card-subtitle">Pubblicato il: {{ publishedAt }}</h6>
       <p class="card-text">
 

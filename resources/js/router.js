@@ -7,6 +7,8 @@ import VueRouter from 'vue-router'
 import HomePage from './components/pages/HomePage'
 import AboutPage from './components/pages/AboutPage'
 import ContactsPage from './components/pages/ContactsPage'
+import NotFoundPage from './components/pages/NotFoundPage'
+
 
 //usa vue router
 Vue.use(VueRouter)
@@ -15,10 +17,12 @@ Vue.use(VueRouter)
 
 const routes = new VueRouter({
     mode: 'history',
+    linkExactActiveClass: 'active',
     routes: [
-        { path: '/', component: HomePage },
+        { path: '/', component: HomePage, name: 'home' },
         { path: '/about', component: AboutPage },
-        { path: '/contacts', component: ContactsPage }
+        { path: '/contacts', component: ContactsPage },
+        { path: '*', component: NotFoundPage }
     ],
 });
 
